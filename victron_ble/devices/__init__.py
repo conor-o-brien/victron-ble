@@ -60,6 +60,7 @@ MODEL_PARSER_OVERRIDE: Dict[int, Type[Device]] = {
     0xA3A4: BatterySense,  # Smart Battery Sense
     0xA3A5: BatterySense,  # Smart Battery Sense
     0xA339: SmartCharger,  # Blue Smart Charger IP65/67
+    0xA324: SmartCharger,  # Blue Smart Charger IP22
 }
 
 
