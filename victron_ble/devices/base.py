@@ -382,6 +382,7 @@ MODEL_ID_MAPPING = {
     0x2780: "Victron Multiplus II 12/3000/120-50 2x120V",
     0xC030: "SmartShunt IP65 500A/50mV",
     0xA339: "Blue Smart IP65 Charger 12|15",
+    0xA324: "Blue Smart IP22 Charger 12|30 (1)",
 }
 
 
