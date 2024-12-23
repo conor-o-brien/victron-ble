@@ -61,6 +61,7 @@ MODEL_PARSER_OVERRIDE: Dict[int, Type[Device]] = {
     0xA3A5: BatterySense,  # Smart Battery Sense
     0xA339: SmartCharger,  # Blue Smart Charger IP65/67
     0xA324: SmartCharger,  # Blue Smart Charger IP22
+    0xA32F: SmartCharger,  # Blue Smart Charger IP22
 }
 
 
@@ -101,6 +102,8 @@ def detect_device_type(data: bytes) -> Optional[Type[Device]]:
         return SmartBatteryProtect
     elif mode == 0x1:  # SolarCharger
         return SolarCharger
+    elif mode == 0xA:  # SolarCharger
+        return SmartCharger
     elif mode == 0xC:  # VE.Bus
         return VEBus
     elif mode == 0xF:  # Orion XS
