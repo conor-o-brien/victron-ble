@@ -90,13 +90,11 @@ def detect_device_type(data: bytes) -> Optional[Type[Device]]:
         return Inverter
     elif mode == 0x6:  # InverterRS
         pass
-    elif mode == 0xA:  # LynxSmartBMS
-        return LynxSmartBMS
+ #   elif mode == 0xA:  # LynxSmartBMS
+      #  return LynxSmartBMS
     elif mode == 0xB:  # MultiRS
         pass
-    elif (
-        mode == 0x5
-    ):  # SmartLithium (commercially Lithium Battery Smart / LiFePO4 Battery Smart)
+    elif mode == 0x5 # SmartLithium (commercially Lithium Battery Smart / LiFePO4 Battery Smart)
         return SmartLithium
     elif mode == 0x9:  # SmartBatteryProtect
         return SmartBatteryProtect
